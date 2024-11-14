@@ -1,6 +1,7 @@
 #import <Cordova/CDV.h>
 #import <MessageUI/MFMailComposeViewController.h>
 #import <LinkPresentation/LPLinkMetadata.h>
+#import <UIKit/UIKit.h>
 
 API_AVAILABLE(ios(13.0))
 @interface SocialSharing : CDVPlugin <UIPopoverControllerDelegate, MFMailComposeViewControllerDelegate, UIDocumentInteractionControllerDelegate,UIActivityItemSource>
@@ -14,6 +15,7 @@ API_AVAILABLE(ios(13.0))
 - (void)available:(CDVInvokedUrlCommand*)command;
 - (void)setIPadPopupCoordinates:(CDVInvokedUrlCommand*)command;
 - (void)share:(CDVInvokedUrlCommand*)command;
+- (void)shareIOS:(CDVInvokedUrlCommand*)command; //mlrosa - new method
 - (void)shareWithOptions:(CDVInvokedUrlCommand*)command;
 - (void)canShareVia:(CDVInvokedUrlCommand*)command;
 - (void)canShareViaEmail:(CDVInvokedUrlCommand*)command;
